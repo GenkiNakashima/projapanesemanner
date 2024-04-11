@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <!-- cssファイルの読み込み -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel=stylesheet href="./static/css/style.css">
+    
+    <title>マナーガイド</title>
+</head>
+
+<body>
+   
+  <header>
+    <div class="slick">
+      <div class="slick__bg slick__bg01">
+          <h1>Welcome to Japan!</h1>
+      </div>
+      <div class="slick__bg slick__bg02">
+        <h1>Welcome to Japan!</h1>
+      </div>
+      <div class="slick__bg slick__bg03">
+        <h1>Welcome to Japan!</h1>
+      </div>
+      <div class="slick__bg slick__bg04">
+        <h1>Welcome to Japan!</h1>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <div class="clear"></div>
+    <nav>
+        <div class="site-title">Japan Life</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/nyu">マナー入力</a></li>
+            <li><a href="/eng">enter your behave</a></li>
+        <ul>
+    </nav>
+</header>
+      <script src="{{ url_for('static', filename='js/style.js') }}"></script>
+      <script>
+        $(function() {
+              $('.slick').slick({
+              // フェードで表示
+              fade: true,
+              // 自動再生
+              autoplay: true,
+              // スライド速度
+              speed: 1500,
+              // 画像切り替え間隔
+              autoplaySpeed : 2000,
+              // フォーカス当てた時の一時停止不可
+              pauseOnFocus: false,
+              // ホバーした時の一時停止不可
+              pauseOnHover: false,
+              // 矢印なしに
+              arrows: false,
+          })
+      });
+      </script>
+<!-- templateの継承部分 -->
+    {% block content %}
+    {% endblock %}
+<!-------------------->
+    
+    <footer>
+        <div class="footer_logo">©︎ Genki Nakashima manner</div>
+    </footer>
+</body>
+</html>

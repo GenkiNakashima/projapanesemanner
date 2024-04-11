@@ -1,0 +1,258 @@
+/* resets */
+body { margin:0px; padding:0px; }
+
+/* main */
+header {
+    height: 450px;
+    z-index: 10;
+}
+
+.slick__bg {
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+       
+}
+
+
+.slick__bg01 {
+    /* background-color: #333; */
+    background-image: url('https://tabizine.jp/wp-content/uploads/2016/04/71846-04.jpg');
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px; */
+}
+
+.slick__bg02 {
+        /* background-color: #333; */
+        background-image: url('https://resize2-icotto.k-img.com/qkjkJ2ooYC5sAICqUdhRAP2bZ-oWDrV46Flftm-Olag/rs:fill:1000:500:1/plain/https://icotto.k-img.com/uploads/press_eye_catch/000/005/256/image/1fb50b75f59f5871983699614d472223.jpeg');
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px;*/
+} 
+
+.slick__bg03{
+        /* background-color: #333; */
+        background-image: url('https://kosublog.com/wp-content/uploads/2015/01/05.jpg');
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px; */
+}
+
+.slick__bg04 {
+        /* background-color: #333; */
+        background-image: url('https://image.omatsurijapan.com/articleimg/2021/05/d0878506-4f447e424e46c4c058a180efe68acb7e-scaled.jpg?auto=compress,format&lossless=0&fit=clip&w=1200');
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px; */
+}
+
+header h1 {
+    background-color: rgba(157, 46, 24, 0.8);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem; 
+    left: 2rem;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background: #292f36;
+    /*position: fixed;*/
+    z-index: 10;
+}
+
+nav div {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    visibility: hidden;
+}
+.visible-title {
+    visibility: visible;
+}
+
+nav ul { 
+    list-style-type: none;
+    margin: 0 2% auto 0;
+    padding-left: 0;
+    text-align: right;
+    max-width: 100%;
+}
+nav ul li { 
+    display: inline-block; 
+    line-height: 60px;
+    margin-left: 10px;
+}
+nav ul li a {
+    text-decoration: none; 
+    color: #a9abae;
+}
+
+/* demo content */
+body { 
+    color: #292f36;
+    font-family: helvetica;
+    line-height: 1.6;
+}
+.content{ 
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 960px;
+    max-width: 100%;
+}
+#contents{ 
+        display: flex;
+        justify-content: center; 
+        
+    }
+article {
+    float: left;
+    width: 720px;
+}
+article p:first-of-type {
+    margin-top: 0;
+}
+aside {
+    float: right;
+    width: 200px;
+}
+
+asides {
+        float: left;
+        width: 200px;
+}
+p img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .content{ 
+        padding: 2rem 0;
+    }
+    article {
+        float: none;
+        margin: 0 auto;
+        width: 96%;
+    }
+    article:last-of-type {  
+        margin-bottom: 3rem;
+    }
+    aside {  
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+      
+      /* ボタンのスタイル */
+a.btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        color: #fff;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        margin: 20px;
+}
+      
+      /* ホバー時のスタイル */
+a.btn:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+        cursor: pointer;
+        transform: scale(2, 2);
+}
+/* ローディング画面のスタイル */
+/* ローディング画面のスタイル */
+#loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      /* ローディングアイコンのスタイル */
+      .loader-icon {
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+       
+footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        height: 15px;
+        background-color: #000;
+        font-size: 15px;
+        color: #fff;
+      }
+      
+      /* .content {
+          position: relative;
+          background: rgb(215, 228, 75);
+          height: 1000px;
+        } */
+      .content h1 {
+          text-align: center;
+        }
+        
+        .cont{
+           display: flex;
+           justify-content: center;
+        }
+      
+        .content p {
+          text-align: center;
+        }
+      
+      
+        .content1{
+          display: flex;
+          justify-content: center;
+        }
+        
+        .content2{
+          display: flex;
+          justify-content: center;
+        }

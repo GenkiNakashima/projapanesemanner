@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<html lang="ja">
+<head>
+    <title>Index</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <br>
+    <br>
+  <div class="content">    
+    <h1>診断結果</h1>
+    <p>{{appropiate}}</p>
+    <br>
+    <p>{{advise}}</p>
+    <!--
+    <a href="/">
+        <img src="../static/images/top.jpg" width="200" height="70">
+    </a>
+    -->
+    <asides>
+        <img src="https://www.f-ship.jp/_img/ja/article/444/img/_//" width="350" height="250">
+        <img src="https://www.atglobal.co.jp/strate/wp-content/uploads/2020/01/image2.jpg" width="350" height="250">
+    </asides>
+    <aside>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpEBh-5ypDOuZWNrlmMFry_wK7OrLdLXweYPj8sK0hw&s">
+        <img src="https://blogs.bu.edu/japanese/files/2015/02/bowing.jpeg">
+    </aside>
+  </div> 
+</body>
+</html>
+{% endblock %}

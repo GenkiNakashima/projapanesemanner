@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Manner Judgement</title>
+    <meta charset="utf-8"/>
+    <style>
+        #loading {
+            /* border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -25px; */
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            /* animation: spin 2s linear infinite; */
+            /* position: absolute; */
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding-top: 20%;
+        }
+
+        #loading p1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            animation: slide 5s linear infinite;
+
+            
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(-200%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        } */
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("loading").style.display = "none";
+        };
+
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+<div id="loading">
+    <p1><img src="https://t3.ftcdn.net/jpg/05/27/80/62/360_F_527806218_tt8ofEpF3yZEsBP2vPlu5zoakPsAJjNc.jpg" alt="Loading..." width="350" height="250"></p1>
+    <!-- <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading..." width="200" height="200"> -->
+
+    <p>診断中です...しばらくお待ちください</p>
+    <br>
+    <br>
+
+</div>
+<div class="content">
+    <br>
+    <aside>
+        <img src="https://thumb.photo-ac.com/6e/6ed5bc4984aa030c138805219808014a_t.jpeg"width="300" height="200">
+        
+    </aside>
+    <br>
+    <h1>マナー診断</h1>
+    <br>
+    
+    <p>テキストを入力してください</p>
+    <form action="/nyu" method="POST" onsubmit="showLoading()">
+        <div class="content1">
+            <textarea name="input_text" maxlength="330" cols="120" rows="2"></textarea>
+        </div> 
+        <div class="content2">  
+            <h5>※字数制限 (最大 330字)</h5>
+            <input type="submit" value="審査" width="50" height="50">
+        </div>
+    </form>
+   
+</div>
+
+</body>
+</html>
+
+<!-- <html lang="ja">
+<head>
+    <title>審査</title>
+    <meta charset="utf-8"/>
+</head>
+
+
+<body>
+    <div class="content">
+        <br>
+        <br>
+        <h1>マナー診断</h1>
+        <br>
+        <p>テキストを入力してください</p>
+        <form id="mannerForm" action="/nyu" method="POST">
+            <div class="content1">
+                <textarea name="input_text" maxlength="330" cols="120" rows="2"></textarea>
+            </div> 
+            <div class="content2">  
+                <h5>※word limit（max 330 words）</h5>
+                <input id="submitButton" type="submit" value="審査">
+            </div>
+        </form>
+    </div>
+    <div id="loader">
+        
+            <div class="loader-icon"></div>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#submitButton').click(function() {
+                // フォームのデフォルトの送信を防ぐ
+                // event.preventDefault();
+
+                // ローディング画面を表示
+                $('#loader').show();
+
+                // フォームデータを取得
+                var formData = $(this).serialize();
+
+                // POSTリクエストを送信
+                $.ajax({
+                    type: 'POST',
+                    url: '/nyu',
+                    data: formData,
+                    success: function(response) {
+                        // ここに成功時の処理を記述
+                    },
+                    error: function() {
+                        // エラー処理
+                        alert('Error occurred while processing');
+                    },
+                    complete: function() {
+                        // ページ遷移が完了したらローディング画面を非表示にする
+                        $('#loader').hide();
+                    }
+                });
+            });
+            // $('#submitButton').click(function() {
+            //     // フォームが送信される前にローディング画面を表示
+            //     $('#loader').show();
+            // });
+            // ページの読み込みが完了したらローディング画面を非表示にする
+            $(window).on('load', function() {
+                $('#loader').hide();
+            });
+        });
+    </script>
+       
+   
+</body>
+</html> -->
+{% endblock %}
